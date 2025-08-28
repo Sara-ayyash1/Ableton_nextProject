@@ -1,54 +1,45 @@
-import Image from "next/image";
-import { useState } from "react";
-// import { Menu } from "lucide-react";
-
 
 export default function Home() {
-const [open, setOpen] = useState(false);
-
-
 return (
-<div className="min-h-screen flex flex-col font-sans">
-{/* Navbar */}
-<header className="flex justify-between items-center px-6 py-4 border-b text-sm">
-<div className="flex items-center space-x-6">
-<button onClick={() => setOpen(!open)}>
-{/* <Menu className="w-6 h-6" /> */}
-</button>
-<nav className="hidden md:flex space-x-4 font-medium">
-<a href="#" className="hover:text-orange-500">Live</a>
-<a href="#" className="hover:text-orange-500">Push</a>
-<a href="#" className="hover:text-orange-500">Move</a>
-<a href="#" className="hover:text-orange-500">Note</a>
-<a href="#" className="hover:text-orange-500">Link</a>
-<a href="#" className="hover:text-orange-500">Shop</a>
-<a href="#" className="hover:text-orange-500">Packs</a>
-<a href="#" className="hover:text-orange-500">Help</a>
-<a href="#" className="text-orange-500">More +</a>
-</nav>
-</div>
-<div className="flex items-center space-x-4">
-<a href="#" className="text-blue-600 font-medium">Try Live 12 for free</a>
-<a href="#" className="hover:underline">Log in or register</a>
-</div>
-</header>
 
+<div className="min-h-screen flex flex-col ">
 
 {/* Hero Section */}
 <main className="flex-1 flex flex-col items-center justify-center text-center px-4">
-<div className="relative w-full max-w-5xl">
-<Image
-src="/studio.png"
-alt="Ableton Studio"
-width={1200}
-height={600}
-className="rounded-xl shadow-lg"
-/>
-<h1 className="absolute inset-0 flex items-center justify-center text-6xl font-bold text-red-500">
-Ableton
-</h1>
+<div
+  className="w-full max-w-7xl h-[600px] mx-auto bg-no-repeat bg-cover bg-center"
+  style={{ backgroundImage: "url('/header.avif')" }}
+>
+  <h1 className="flex justify-center items-center h-full text-5xl font-bold text-red-500">
+    Ableton
+  </h1>
 </div>
+
 </main>
+
+<div className="max-w-4xl mx-auto my-12 px-4">
+  <div className="space-y-4">
+    <h1 className="text-l md:text-xl font-semibold leading-relaxed">
+      We make 
+      <a href="/en/live/" className="text-blue-600 hover:underline"> Live</a>, 
+      <a href="/en/push/" className="text-blue-600 hover:underline"> Push</a>, 
+      <a href="/en/note/" className="text-blue-600 hover:underline"> Note</a>, 
+      <a href="/en/move/" className="text-blue-600 hover:underline"> Move </a> 
+      and  
+      <a href="/en/link/" className="text-blue-600 hover:underline"> Link</a> 
+      — unique software and hardware for music creation and performance. 
+      With these products, our community of users creates amazing things.
+    </h1>
+
+    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+      Ableton was founded in 1999 and released the first version of Live in 2001. 
+      Our products are used by a community of dedicated musicians, sound designers, 
+      and artists from across the world.
+    </p>
+  </div>
+</div>
+
+
 </div>
 );
 }
