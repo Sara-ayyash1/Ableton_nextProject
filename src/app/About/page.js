@@ -1,9 +1,7 @@
 
 import InfoSection from "@/components/InfoSection";
-
 import Hero from "@/components/Hero";
-
-
+import ImageCollage  from "@/components/ImageCollage ";
 
 export default function About() {
 return (
@@ -39,7 +37,15 @@ return (
 
     {/* Img Section */}
 
-
+     
+     <ImageCollage
+      leftImages={[
+        { src: "/photo-1.jpg", w: 400, h: 400 }
+      ]}
+      rightImage="/photo-2.jpg"
+      bgPosition="right"
+      bgColor="bg-yellow-100"
+    />
 
 
       {/* Info Section */}
@@ -69,8 +75,15 @@ return (
       />
      {/* Img Section */}
 
-
-
+     <ImageCollage
+      leftImages={[
+        { src: "/photo-3.jpg", w: 200, h: 200 },
+        { src: "/photo-4.jpg", w: 200, h: 200 }
+      ]}
+      rightImage="/photo-5.jpg"
+      bgPosition="right"
+      bgColor="bg-green-100"
+    />
 
       {/* Info Section */}
     <div>
@@ -82,6 +95,30 @@ return (
       />
     </div>
     </div>
+
+     {/* video Section */}  
+
+
+      {/* Img Section */}
+
+
+      <ImageCollage
+        leftImages={[{ src: "/photo-6-a.jpg", w: 300, h: 300 }]}
+        rightImage="/photo-7.jpg"
+        bgPosition="center"
+        bgColor="bg-purple-300"
+      />
+     {/* Info Section */}
+    <div>
+
+       <InfoSection
+        title="We want our employees to love it here. Since we’re looking for exceptional talent from around the world, we will do everything we can to make your transition as easy as possible."
+        paragraphs={[
+          "If you're joining us in Berlin, we'll help with relocation and paperwork. We’ll even provide you with free German or English lessons. Plus, working in Germany means you can expect comprehensive health insurance for you and your family, as well as generous maternity and paternity leave. Office hours are flexible, but it’s not all work; we have several company and team outings throughout the year as well as a variety of fun, informal small-group activities."
+        ]}
+      />
+    </div>
+
 </div>
 );
 }
